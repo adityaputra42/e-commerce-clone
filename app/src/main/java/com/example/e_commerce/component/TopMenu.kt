@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Divider
+import androidx.compose.material3.DividerDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -44,10 +46,12 @@ fun TopMenu(modifier: Modifier = Modifier, listTopMenu: ListTopMenu) {
                 fontSize = 14.sp
             )
         }
-        Divider(
+        HorizontalDivider(
             modifier
                 .width(1.dp)
-                .height(40.dp)
+                .height(40.dp),
+            thickness = DividerDefaults.Thickness,
+            color = DividerDefaults.color
         )
     }
 }
